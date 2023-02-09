@@ -420,6 +420,12 @@
                         "hostname": "DESKTOP-TFCBQ61",
                         "ipAddress": "127.0.0.1",
                         "mac": "AC:74:B1:85:46:B6"
+                    },
+                    {
+                        "commandLine": "C:\\Users\\nassi\\OneDrive\\Documents\\cours\\ihm\\Whiteboard\\Whiteboard.exe --device \"Loopback Pseudo-Interface 1\" --port 22222",
+                        "hostname": "DESKTOP-TFCBQ61",
+                        "ipAddress": "127.0.0.1",
+                        "mac": "AC:74:B1:85:46:B6"
                     }
                 ],
                 "view": {
@@ -468,6 +474,10 @@
                                 {
                                     "name": "créatinine",
                                     "type": "DOUBLE"
+                                },
+                                {
+                                    "name": "méthode",
+                                    "type": "STRING"
                                 }
                             ],
                             "name": "calculate_clearance",
@@ -508,7 +518,7 @@
                     "isCollapsed": false,
                     "positionX": -29,
                     "positionY": 499,
-                    "positionZ": 2.379999999999993,
+                    "positionZ": 2.7199999999999855,
                     "width": 252
                 }
             },
@@ -521,26 +531,6 @@
                     "inputs": [
                         {
                             "description": "",
-                            "name": "poids",
-                            "type": "DOUBLE"
-                        },
-                        {
-                            "description": "",
-                            "name": "sexe",
-                            "type": "DOUBLE"
-                        },
-                        {
-                            "description": "",
-                            "name": "âge",
-                            "type": "DOUBLE"
-                        },
-                        {
-                            "description": "",
-                            "name": "créatinine",
-                            "type": "DOUBLE"
-                        },
-                        {
-                            "description": "",
                             "name": "clearance",
                             "type": "DOUBLE"
                         }
@@ -550,7 +540,7 @@
                     "outputs": [
                         {
                             "description": "",
-                            "name": "formatted clearance",
+                            "name": "formatted_clearance",
                             "type": "STRING"
                         }
                     ],
@@ -562,24 +552,67 @@
                 },
                 "identity": "formulaire",
                 "instances": [
+                    {
+                        "commandLine": "\"C:\\Program Files\\Ingescape\\Ingescape Circle\\igsProxy.exe\" --port 22222 --device \"Loopback Pseudo-Interface 1\" --name formulaire --license \"C:/Users/nassi/OneDrive/Documents\\Ingescape\\licenses\\\" --ws ws://localhost:22222",
+                        "hostname": "DESKTOP-TFCBQ61",
+                        "ipAddress": "127.0.0.1",
+                        "mac": "AC:74:B1:85:46:B6"
+                    },
+                    {
+                        "commandLine": "\"C:\\Program Files\\Ingescape\\Ingescape Circle\\igsProxy.exe\" --port 22222 --device \"Loopback Pseudo-Interface 1\" --name Proxy --license C:/Users/nassi/OneDrive/Documents\\Ingescape\\licenses\\ --ws ws://localhost:22222",
+                        "hostname": "DESKTOP-TFCBQ61",
+                        "ipAddress": "127.0.0.1",
+                        "mac": "AC:74:B1:85:46:B6"
+                    }
                 ],
                 "view": {
                     "height": 160,
                     "isCollapsed": false,
-                    "positionX": 332,
-                    "positionY": 409,
-                    "positionZ": 2.369999999999993,
+                    "positionX": 329,
+                    "positionY": 498,
+                    "positionZ": 2.5899999999999883,
                     "width": 294
+                }
+            },
+            {
+                "data": {
+                },
+                "definition": {
+                    "description": "",
+                    "family": "ca2ffa9faabe4781a21e590fabeabc67",
+                    "inputs": [
+                    ],
+                    "isDynamic": false,
+                    "name": "Proxy",
+                    "outputs": [
+                    ],
+                    "parameters": [
+                    ],
+                    "services": [
+                    ],
+                    "version": ""
+                },
+                "identity": "e0338d0b-52ea-42ae-bd3d-7823269ac2f4",
+                "instances": [
+                    {
+                        "commandLine": "\"C:\\Program Files\\Ingescape\\Ingescape Circle\\igsProxy.exe\" --port 22222 --device \"Loopback Pseudo-Interface 1\" --name Proxy --license \"C:/Users/nassi/OneDrive/Documents\\Ingescape\\licenses\\\" --ws ws://localhost:22222",
+                        "hostname": "DESKTOP-TFCBQ61",
+                        "ipAddress": "127.0.0.1",
+                        "mac": "AC:74:B1:85:46:B6"
+                    }
+                ],
+                "lastKnowAgentUUID": "9DA645826A07FF47B4F04C0332DA48D2",
+                "view": {
+                    "height": 44,
+                    "isCollapsed": false,
+                    "positionX": -5,
+                    "positionY": 395,
+                    "positionZ": 2.6799999999999864,
+                    "width": 252
                 }
             }
         ],
         "mappings": [
-            {
-                "fromAgent": "Whiteboard",
-                "fromInput": "chatMessage",
-                "toAgent": "formulaire",
-                "toOutput": "formatted clearance"
-            },
             {
                 "fromAgent": "formulaire",
                 "fromInput": "clearance",
@@ -591,6 +624,18 @@
                 "fromInput": "wildcard",
                 "toAgent": "laboratoire",
                 "toOutput": "clearance"
+            },
+            {
+                "fromAgent": "Whiteboard",
+                "fromInput": "chatMessage",
+                "toAgent": "formulaire",
+                "toOutput": "formatted_clearance"
+            },
+            {
+                "fromAgent": "c4e45dcf-1602-4a5b-b316-4fbbddf29acb",
+                "fromInput": "wildcard",
+                "toAgent": "formulaire",
+                "toOutput": "formatted_clearance"
             }
         ],
         "splits": [
@@ -598,57 +643,6 @@
         "splitters": [
         ],
         "tools": [
-            {
-                "data": {
-                    "arguments": [
-                        {
-                            "poids": "40.1"
-                        },
-                        {
-                            "sexe": "f"
-                        },
-                        {
-                            "âge": "35"
-                        },
-                        {
-                            "créatinine": "133.3"
-                        }
-                    ],
-                    "selectedAgent": "laboratoire",
-                    "selectedService": "calculate_clearance"
-                },
-                "definition": {
-                    "description": "",
-                    "family": "7fc274c8-b06e-548p-9d09-d14878381016",
-                    "inputs": [
-                        {
-                            "description": "",
-                            "name": "trigger",
-                            "type": "IMPULSION"
-                        }
-                    ],
-                    "isDynamic": false,
-                    "name": "",
-                    "outputs": [
-                    ],
-                    "parameters": [
-                    ],
-                    "services": [
-                    ],
-                    "version": ""
-                },
-                "identity": "e468b23b-a26f-4443-ba17-c9d674d24cb2",
-                "instances": [
-                ],
-                "view": {
-                    "height": 48,
-                    "isCollapsed": false,
-                    "positionX": 28,
-                    "positionY": 276,
-                    "positionZ": 2.419999999999992,
-                    "width": 246
-                }
-            },
             {
                 "data": {
                     "selectedAgent": "laboratoire"
@@ -674,9 +668,9 @@
                 "view": {
                     "height": 174,
                     "isCollapsed": true,
-                    "positionX": 317,
-                    "positionY": 147,
-                    "positionZ": 2.4299999999999917,
+                    "positionX": 337,
+                    "positionY": 148,
+                    "positionZ": 2.699999999999986,
                     "width": 589
                 }
             },
@@ -713,6 +707,101 @@
                     "positionY": 615,
                     "positionZ": 2.3999999999999924,
                     "width": 180
+                }
+            },
+            {
+                "data": {
+                },
+                "definition": {
+                    "description": "",
+                    "family": "7fc274c8-b06e-429b-9d09-d14878381016",
+                    "inputs": [
+                        {
+                            "description": "",
+                            "name": "wildcard",
+                            "type": "WILDCARD_SINGLE_MAPPING"
+                        }
+                    ],
+                    "isDynamic": false,
+                    "name": "",
+                    "outputs": [
+                    ],
+                    "parameters": [
+                    ],
+                    "services": [
+                    ],
+                    "version": ""
+                },
+                "identity": "c4e45dcf-1602-4a5b-b316-4fbbddf29acb",
+                "instances": [
+                    {
+                        "commandLine": "\"C:\\Program Files\\Ingescape\\Ingescape Circle\\igsProxy.exe\" --port 22222 --device \"Loopback Pseudo-Interface 1\" --license \"C:/Users/nassi/OneDrive/Documents\\Ingescape\\licenses\\\"",
+                        "hostname": "DESKTOP-TFCBQ61",
+                        "ipAddress": "127.0.0.1",
+                        "mac": "AC:74:B1:85:46:B6"
+                    }
+                ],
+                "view": {
+                    "height": 103,
+                    "isCollapsed": false,
+                    "positionX": 772.9780078127153,
+                    "positionY": 614.2146279547209,
+                    "positionZ": 2.6399999999999872,
+                    "width": 343
+                }
+            },
+            {
+                "data": {
+                    "arguments": [
+                        {
+                            "poids": "40.1"
+                        },
+                        {
+                            "sexe": "f"
+                        },
+                        {
+                            "âge": "35"
+                        },
+                        {
+                            "créatinine": "133.3"
+                        },
+                        {
+                            "méthode": "MDRD"
+                        }
+                    ],
+                    "selectedAgent": "laboratoire",
+                    "selectedService": "calculate_clearance"
+                },
+                "definition": {
+                    "description": "",
+                    "family": "7fc274c8-b06e-548p-9d09-d14878381016",
+                    "inputs": [
+                        {
+                            "description": "",
+                            "name": "trigger",
+                            "type": "IMPULSION"
+                        }
+                    ],
+                    "isDynamic": false,
+                    "name": "",
+                    "outputs": [
+                    ],
+                    "parameters": [
+                    ],
+                    "services": [
+                    ],
+                    "version": ""
+                },
+                "identity": "e468b23b-a26f-4443-ba17-c9d674d24cb2",
+                "instances": [
+                ],
+                "view": {
+                    "height": 188,
+                    "isCollapsed": false,
+                    "positionX": 10,
+                    "positionY": 146,
+                    "positionZ": 2.7099999999999858,
+                    "width": 246
                 }
             }
         ]
