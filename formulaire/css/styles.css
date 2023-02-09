@@ -1,0 +1,226 @@
+/*
+	styles.css
+	Created by Ingenuity i/o on 2023/02/08
+
+	no description
+	Copyright © 2023 Ingenuity i/o. All rights reserved.
+*/
+
+.input-error {
+    background-color : red
+}
+
+#results {
+    text-align : center;
+    margin-top : 20px;
+}
+
+body {
+    background-image: url(bg-pattern.jpeg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, select:focus {
+    border: 1px solid #333;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    color: #333;
+}/*
+	styles.css
+	Created by Ingenuity i/o on 2023/02/08
+
+	no description
+	Copyright © 2023 Ingenuity i/o. All rights reserved.
+*/
+
+body {
+    background-image: url(bg-pattern.jpeg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, select:focus {
+    border: 1px solid #333;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    color: #333;
+}/*
+	styles.css
+	Created by Ingenuity i/o on 2023/02/08
+
+	no description
+	Copyright © 2023 Ingenuity i/o. All rights reserved.
+*/
+
+body {
+    background-image: url(bg-pattern.jpeg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, select:focus {
+    border: 1px solid #333;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    color: #333;
+}
